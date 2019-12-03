@@ -97,6 +97,7 @@ class ForegroundServicePlugin: MethodCallHandler, IntentService("org.thebus.Fore
     //in order to let the plugin call registerWith
     //which should in turn call GeneratedPluginRegistrant.registerWith
     //which apparently does some voodoo magic that lets this whole thing work
+    @JvmStatic
     fun setPluginRegistrantCallback(theCallback: PluginRegistry.PluginRegistrantCallback){
       sPluginRegistrantCallback = theCallback
     }
